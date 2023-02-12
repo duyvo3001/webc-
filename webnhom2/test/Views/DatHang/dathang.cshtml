@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "dathang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<test.Models.DatHang>
+@section scripts{
+    <script src="~/Scripts/dathang.js"></script>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <td>Sản Phẩm </td>
+            <td>Tên Sản Phẩm</td>
+            <td>Giá</td>
+            <td>Số Lượng</td>
+            <td>Tổng </td>
+            <td>Xóa</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.MaLK</td>
+            <td>Tổng</td>
+            <td>@item.SoLuong</td>
+            <td>Tổng</td>
+            <td>Tổng</td>
+            <td>Tổng</td>
+        </tr>
+        }
+     </tbody>
+</table>
+<input type="button" id="btn-tieptuc" value="TIẾP TỤC MUA SẮM" />
+<input type="button" id="btn-thanhtoan" value="THANH TOÁN " />
+<input type="button" id="btn-xoa" value="XÓA" />

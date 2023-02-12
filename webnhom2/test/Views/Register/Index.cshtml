@@ -1,0 +1,65 @@
+﻿
+<div class="section padding_layout_1">
+
+    <div class="lock-wrapper">
+        <div class="panel lock-box">
+            <div class="center"> <img alt="" src="~/Content/img/profile-logo.png" class="img-circle" /> </div>
+            <h4 class="label-login">
+                TẠO TÀI KHOẢN!
+                </h4class="label-login">
+                <p class="text-center">Vui lòng tạo tài khoản để truy cập tài khoản của bạn</p>
+                <div class="login-form-checkout">
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="text-left">
+                            <label for="signupInputName" class="control-label">Họ Tên</label>
+                            <input id="name" type="text" placeholder="Nhập họ tên" class="form-control" name="firstName" />
+                        </div>
+
+                        <div class="text-left">
+                            <label for="signupInputEmail" class="control-label">Tài Khoản Gmail</label>
+                            <input id="gmail" type="email" placeholder="Nhập Gmail" class="form-control" name="email" />
+                        </div>
+                        <div class="text-left">
+                            <label for="signupInputEmail" class="control-label">Số Điện Thoại</label>
+                            <input id="sdt" type="text" placeholder="Nhập SĐT" class="form-control" name="sdt" />
+                        </div>
+                        <div class="text-left">
+                            <label for="signupInputEmail" class="control-label">Địa Chỉ</label>
+                            <input id="diachi" type="text" placeholder="Nhập Địa Chỉ" class="form-control" name="diachi" />
+                        </div>
+
+                        <div class="text-left">
+                            <label for="signupInputPassword" class="control-label">Mật Khẩu</label>
+                            <input id="password" type="password" placeholder="Nhập mật khẩu" class="form-control lock-input" name="password" />
+                        </div>
+
+
+                        <div class="text-left">
+                            <label for="signupInputRepassword" class="control-label">Xác Nhận Mật Khẩu</label>
+                            <input id="signupInputRepassword" type="password" placeholder="Nhập lại mật khẩu" class="form-control lock-input" name="confirmPassword" />
+                        </div>
+
+
+                        <div class="text-left pad-btm">
+                            <label for="checkboxtickmark" class="form-checkbox form-icon control-label">
+                                <input id="checkboxtickmark" type="checkbox" name="agree" value="agree">
+                                Chấp Nhận Tất Cả Điều Khoản
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btlogin-register">
+                        <button class="btn btn-block btn-primary" id="btadd">
+                            Tạo Tài Khoản
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div class="registration"> Bạn đã có tài khoản! <a href="~/Login/Index"> <span class="text-primary"> hãy đăng nhập </span> </a> </div>
+    </div>
+
+    @section scripts{
+        <script src="~/Scripts/register.js"></script>
+        <script src="~/Scripts/timkiem.js"></script>
+    }

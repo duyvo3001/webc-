@@ -1,0 +1,42 @@
+﻿
+<div class="section padding_layout_1">
+    <!-- LOGIN FORM -->
+    <!--===================================================-->
+    <div class="lock-wrapper">
+        <div class="panel lock-box">
+            <div class="center"> <img alt="" src="~/Content/img/profile-logo.png" class="img-circle" /> </div>
+            <h4 class="label-login">ĐĂNG NHẬP!</h4>
+            <p class="text-center">Vui lòng đăng nhập để truy cập tài khoản của bạn</p>
+            <div class="login-form-checkout">
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-left">
+                        <label class="text-muted">Tên Đăng Nhập</label>
+                        <input type="email" id="username" placeholder="Nhập tài khoản" class="form-control" required />
+                    </div>
+                    <div class="text-left">
+                        <label for="signupInputPassword" class="text-muted">Mật Khẩu</label>
+                        <input type="password" id="password" placeholder="Nhập mật khẩu" class="form-control lock-input" required />
+                    </div>
+                    <div id="resutl"></div>
+                    <div class="pull-left pad-btm">
+                        <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox"> Remember Me
+                        </label>
+                    </div>
+                    <div class="btlogin-register">
+                        <button class="btn btn-block btn-primary" id="btlogin">
+                            ĐĂNG NHẬP
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="registration"> Nếu chưa có tài khoản ! <a href="~/Register/Index"> <span class="text-primary"> Tạo tài khoản </span> </a> </div>
+    </div>
+</div>
+@section scripts{
+<script src="~/Scripts/login.js"></script>
+<script src="~/Scripts/timkiem.js"></script>
+}

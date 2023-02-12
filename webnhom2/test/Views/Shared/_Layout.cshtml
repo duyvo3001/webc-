@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@model test.Models.timkiem
+@section scripts{
+    <script src="~/Scripts/timkiem.js"></script>
+    <script src="~/Scripts/login.js"></script>
+}
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>ĐẾN ITNEXT SẮM NGAY!!!</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- site icons -->
+    <link rel="icon" href="~/Content/images/fevicon/fevicon.png" type="image/gif" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" />
+    <!-- Site css -->
+    <link rel="stylesheet" href="~/Content/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/Content/css/responsive.css" />
+    <!-- colors css -->
+    <link rel="stylesheet" href="~/Content/css/colors1.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/Content/css/custom.css" />
+    <!-- wow Animation css -->
+    <link rel="stylesheet" href="~/Content/css/animate.css" />
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body id="default_theme" class="it_service">
+    <header id="default_header" class="header_style_1">
+        <!-- header top -->
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm12">
+                        <div class="full">
+                            <div class="topbar-left">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div class="search">
+                                            <div class="side_bar_blog">
+                                                <div class="side_bar_search">
+                                                    <div class="input-group stylish-input-group">
+                                                        <input class="form-control" placeholder="TÌM SẢN PHẨM" type="text" id="inputSearchAuto">
+                                                        <span class="input-group-addon">
+                                                            <button type="submit" id="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 right_section_header_top col-sm12">
+                        <div class="float-left">
+                            <a href="/GioHang1/Viewgiohang/"><i class="fas fa-shopping-cart"></i></a>
+                        </div>   
+                        <div class="float-right">
+                            <div class="make_appo" id="account"> <a href="~/Login/Index" style="margin-top:auto" class="btn">ĐĂNG NHẬP</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header top -->
+        <!-- header bottom -->
+        <div class="header_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <!-- logo start -->
+                        <div class="logo"> <a href="~/ITNEXT/Index"><img src="~/Content/images/logos/it_logo.png" alt="logo" /></a> </div>
+                        <!-- logo end -->
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <!-- menu start -->
+                        <div class="menu_side">
+                            <div id="navbar_menu">
+                                <ul class="first-ul">
+                                    <li>
+                                        <a class="active" href="/ITNEXT/Index">Trang chủ</a>
+                                    </li>
+                                    <li><a href="/ITNEXT/Laptop">LAPTOP</a></li>
+                                    <li>
+                                        <a href="/ITNEXT/LinhKien">LINH KIỆN</a>
+                                        <ul>
+                                            <li><a href="/ITNEXT/CPU">CPU</a></li>
+                                            <li><a href="/ITNEXT/VGA">Card Đồ Họa</a></li>
+                                            <li><a href="/ITNEXT/HDD">Ổ Cứng</a></li>
+                                            <li><a href="/ITNEXT/MainBoard">MainBoard</a></li>
+                                            <li><a href="/ITNEXT/Ram">Ram</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/ITNEXT/ManHinh">MÀN HÌNH</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ITNEXT/GamingGear">Gaming Gear</a>
+                                        <ul>
+                                            <li><a href="/ITNEXT/Chuot">Chuột  </a></li>
+                                            <li><a href="/ITNEXT/BanPhim">Bàn Phím</a></li>
+                                            <li><a href="/ITNEXT/TaiNghe">Tai Nghe</a></li>
+                                            <li><a href="/ITNEXT/TayCam">Tay Cầm Chơi Game</a></li>
+                                            <li><a href="/ITNEXT/VR">Kính Thực Tế Ảo</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/ITNEXT/PhuKien">PHỤ KIỆN</a>
+                                        <ul>
+                                            <li><a href="/ITNEXT/MayIn">Máy In</a></li>
+                                            <li><a href="/ITNEXT/ThietBiMang">Thiết Bị Mạng</a></li>
+                                            <li><a href="/ITNEXT/Loa">Loa</a></li>
+                                            <li><a href="/ITNEXT/ThietBiLuuTru">Thiết Bị Lưu Trữ Di Động</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="it_contact.html">Contact</a>
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/alljustvirtual/">Vũ Thái Tuấn</a></li>
+                                            <li><a href="https://www.facebook.com/duy.minh.30">Võ Minh Duy</a></li>
+                                            <li><a href="https://www.facebook.com/lhioi.nguyen">Nguyễn Kim Hưng</a></li>
+                                            <li><a href="https://www.facebook.com/VuDucVan5641">Vũ Đức Văn</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                        <!-- menu end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header bottom end -->
+
+
+    </header>
+
+    <div>
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+    <footer class="footer_style_2">
+        <div class="container-fuild">
+            <div class="row">
+                <div class="map_section">
+                    <div id="map"></div>
+                </div>
+                <div class="footer_blog">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main-heading left_text">
+                                <h2>It Next Theme</h2>
+                            </div>
+                            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+                            <ul class="social_icons">
+                                <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-heading left_text">
+                                <h2>Additional links</h2>
+                            </div>
+                            <ul class="footer-menu">
+                                <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
+                                <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
+                                <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
+                                <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
+                                <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-heading left_text">
+                                <h2>Services</h2>
+                            </div>
+                            <ul class="footer-menu">
+                                <li><a href="it_data_recovery.html"><i class="fa fa-angle-right"></i> Data recovery</a></li>
+                                <li><a href="it_computer_repair.html"><i class="fa fa-angle-right"></i> Computer repair</a></li>
+                                <li><a href="it_mobile_service.html"><i class="fa fa-angle-right"></i> Mobile service</a></li>
+                                <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Network solutions</a></li>
+                                <li><a href="it_techn_support.html"><i class="fa fa-angle-right"></i> Technical support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-heading left_text">
+                                <h2>Contact us</h2>
+                            </div>
+                            <p>
+                                123 Second Street Fifth Avenue,<br>
+                                Manhattan, New York<br>
+                                <span style="font-size:18px;"><a href="tel:+9876543210">+987 654 3210</a></span>
+                            </p>
+                            <div class="footer_mail-section">
+                                <form>
+                                    <fieldset>
+                                        <div class="field">
+                                            <input placeholder="Email" type="text">
+                                            <button class="button_custom"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cprt">
+                    <p>ItNext © Copyrights 2019 Design by html.design</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- js section -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- menu js -->
+    <script src="~/Content/js/menumaker.js"></script>
+    <!-- wow animation -->
+    <script src="~/Content/js/wow.js"></script>
+    <!-- custom js -->
+    <script src="~/Content/js/custom.js"></script>
+    <!-- revolution js files -->
+    <script src="~/Content/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Content/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+</body>
+</html>

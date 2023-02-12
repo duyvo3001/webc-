@@ -1,0 +1,98 @@
+﻿
+@model test.Models.giohang
+
+<div id="inner_banner" class="section inner_banner_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="title-holder">
+                        <div class="title-holder-cell text-left">
+                            <h1 class="page-title">GIỎ HÀNG</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="~/ITNEXT/Index">TRANG CHỦ</a></li>
+                                <li class="active">GIỎ HÀNG</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end inner page banner -->
+<div class="section padding_layout_1 Shopping_cart_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="product-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>SẢN PHẨM</th>
+                                <th>SỐ LƯỢNG</th>
+                                <th class="text-center">GIÁ</th>
+                                <th class="text-center">TỔNG</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                if (ViewBag.gh1 != null)
+                                {
+                                    foreach (var item in ViewBag.gh1)
+                                    {
+                                        <tr>
+                                            <td class="col-sm-8 col-md-6">
+                                                <div class="media">
+                                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="~/Content/linhkien/@item.Hinh1" alt="#"></a>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading"><a href="#">@item.TenLK</a></h4>
+                                                        <span>Status: </span><span class="text-success">In Stock<span id="cardID">@item.cardID</span></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                                                <input class="form-control" value="3" type="email">
+                                            </td>
+                                            <td class="col-sm-1 col-md-1 text-center"><p class="price_table">@String.Format("{0:N0}", item.Gia)₫</p></td>
+                                            <td class="col-sm-1 col-md-1 text-center"><p class="price_table">@String.Format("{0:N0}", (item.SoLuong * item.Gia))₫</p></td>
+                                            <td class="col-sm-1 col-md-1"><input type="button" id="btn_xoa" onclick="fun('@item.cardID')" value="xóa" class="bt_main"></td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="shopping-cart-cart">
+                    <table>
+                        <tbody>
+                            <tr class="head-table">
+                                <td><h5>Giỏ Hàng</h5></td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Tổng cộng</h3></td>
+                                <td class="text-right"><h4>@String.Format("{0:N0}", ViewBag.gh2)₫</h4></td>
+                            </tr>
+                            <tr>
+                                <td><a href="~/ITNEXT/index"><button type="button" class="button">Tiếp tục mua sắm</button></a></td>
+                                <td><input type="button" class="button" id="btn_ThanhToan" value="Thanh Toán" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/thanhtoanscripts.js"></script>
+    <script src="~/Scripts/timkiem.js"></script>
+    <script src="~/Scripts/xoaGiohangscripts.js"></script>
+}
+
+
+

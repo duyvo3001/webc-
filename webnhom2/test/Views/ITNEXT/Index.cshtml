@@ -1,0 +1,361 @@
+﻿<div class="section padding_layout_1">
+    <div class="bannertop">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                        <div class="khoi-slide">
+                            <div class="cac-slide">
+                                <div class="slide active"><div class="img-responsive"><img src="~/Content/linhkien/banner_collection.jpg" style="max-width:100%" /></div></div>
+
+                                <div class="slide"><div class="img-responsive"><img src="~/Content/images/Banner_2.jpg" style="max-width:100%" /></div></div>
+                            </div>
+                            <div class="nut-slide">
+                                <span id="btn-prev"><i class="fas fa-chevron-left"></i></span>
+                                <span id="btn-next"><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="slider" class="section main_slider">
+    <div class="paner">
+
+    </div>
+</div>
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="sale">
+                        <h2>Top Sản Phẩm Bán Chạy</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bor">
+            <div class="bor1">
+                <div class="row">
+                    @foreach (var item in ViewBag.BANCHAY)
+                    {
+
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                            <div id="malk1">@item.MaLK</div>
+                            <div class="product_list">
+                                <div class="product_img">  <a href="/ITNEXT/Details/@item.MaLK"><img class="img-responsive" src="~/Content/linhkien/@item.Hinh" alt=""></a> </div>
+                                <div class="product_detail_btm">
+                                    <a href="/ITNEXT/Details/@item.MaLK">
+                                        <div class="center">
+                                            <h4>@item.TenLK</h4>
+                                        </div>
+                                        <div class="starratin">
+                                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                                        </div>
+                                        <div class="product_price">
+                                            <p><span class="old_price">15.00 VNĐ</span> – <span class="new_price"> @String.Format("{0:N0}", item.Gia)₫</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<!-- end section -->
+<!-- section -->
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+
+                    <div class="sale">
+                        <h2>lapTop Gaming</h2>
+                        <div class="footer_layout"><p class="large"><a href="~/ITNEXT/Laptop">Xem Thêm>></a></p></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="bor">
+            <div class="bor1">
+                <div class="row">
+                    @foreach (var item in ViewBag.Lap)
+                    {
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                            <div id="malk1">@item.MaLK</div>
+                            <div class="product_list">
+                                <div class="product_img">  <a href="/ITNEXT/Details/@item.MaLK"><img class="img-responsive" src="~/Content/linhkien/@item.Hinh" alt=""></a> </div>
+                                <div class="product_detail_btm">
+                                    <a href="/ITNEXT/Details/@item.MaLK">
+                                        <div class="center">
+                                            <h4>@item.TenLK</h4>
+                                        </div>
+                                        <div class="starratin">
+                                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                                        </div>
+                                        <div class="product_price">
+                                            <p><span class="old_price">15.00 VNĐ</span> – <span class="new_price">@String.Format("{0:N0}", item.Gia)₫</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="section padding_layout_1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+
+                        <div class="sale">
+                            <h2>Màn Hình Máy Tính</h2>
+                            <div class="footer_layout"><p class="large"><a href="~/ITNEXT/ManHinh">Xem Thêm>></a></p></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="bor">
+                <div class="bor1">
+                    <div class="row">
+                        @foreach (var item in ViewBag.manhinh)
+                        {
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                                <div id="malk1">@item.MaLK</div>
+                                <div class="product_list">
+                                    <div class="product_img">  <a href="/ITNEXT/Details/@item.MaLK" id="LK"><img class="img-responsive" src="~/Content/linhkien/@item.Hinh" alt=""></a> </div>
+                                    <div class="product_detail_btm">
+                                        <a href="/ITNEXT/Details/@item.MaLK">
+                                            <div class="center">
+                                                <h4>@item.TenLK</h4>
+                                            </div>
+                                            <div class="starratin">
+                                                <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                                            </div>
+                                            <div class="product_price">
+                                                <p><span class="old_price">15.00 VNĐ</span> – <span class="new_price">@String.Format("{0:N0}", item.Gia)₫</span></p>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section padding_layout_1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+
+                        <div class="sale">
+                            <h2>Linh Kiện</h2>
+                            <div class="footer_layout"><p class="large"><a href="~/ITNEXT/LinhKien">Xem Thêm>></a></p></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="bor">
+                <div class="bor1">
+                    <div class="row">
+                        @foreach (var item in ViewBag.linhkien)
+                        {
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                                <div id="malk1">@item.MaLK</div>
+                                <div class="product_list">
+                                    <div class="product_img">  <a href="/ITNEXT/Details/@item.MaLK"><img class="img-responsive" src="~/Content/linhkien/@item.Hinh" alt=""></a> </div>
+                                    <div class="product_detail_btm">
+                                        <a href="/ITNEXT/Details/@item.MaLK">
+                                            <div class="center">
+                                                <h4>@item.TenLK</h4>
+                                            </div>
+                                            <div class="starratin">
+                                                <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                                            </div>
+                                            <div class="product_price">
+                                                <p><span class="old_price">15.00 VNĐ</span> – <span class="new_price">@String.Format("{0:N0}", item.Gia)₫</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="section padding_layout_1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+
+                        <div class="sale">
+                            <h2>Phụ Kiện</h2>
+                            <div class="footer_layout"><p class="large"><a href="~/ITNEXT/PhuKien">Xem Thêm>></a></p></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="bor">
+                <div class="bor1">
+                    <div class="row">
+                        @foreach (var item in ViewBag.phukien)
+                        {
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                            <div id="malk1">@item.MaLK</div>
+                            <div class="product_list">
+                                <div class="product_img">  <a href="/ITNEXT/Details/@item.MaLK"><img class="img-responsive" src="~/Content/linhkien/@item.Hinh" alt=""></a> </div>
+                                <div class="product_detail_btm">
+                                    <a href="/ITNEXT/Details/@item.MaLK">
+                                        <div class="center">
+                                            <h4>@item.TenLK</h4>
+                                        </div>
+                                        <div class="starratin">
+                                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
+                                        </div>
+                                        <div class="product_price">
+                                            <p><span class="old_price">15.00 VNĐ</span> – <span class="new_price">@String.Format("{0:N0}", item.Gia)₫</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_left">
+                        <h2 class="ao"><div>Tin Tức</div></h2>
+                        <h3> Cập Nhật Những Tin Tức Công Nghệ Nhanh Nhất</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="full blog_colum">
+                    <div class="blog_feature_img"> <img src="~/Content/images/it_service/post-03.jpg" alt="#" /> </div>
+                    <div class="post_time">
+                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                    </div>
+                    <div class="blog_feature_head">
+                        <h4>Why Your Computer Hates You</h4>
+                    </div>
+                    <div class="blog_feature_cont">
+                        <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="full blog_colum">
+                    <div class="blog_feature_img"> <img src="~/Content/images/it_service/post-04.jpg" alt="#" /> </div>
+                    <div class="post_time">
+                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                    </div>
+                    <div class="blog_feature_head">
+                        <h4>Easy Tips To Computer Repair</h4>
+                    </div>
+                    <div class="blog_feature_cont">
+                        <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="full blog_colum">
+                    <div class="blog_feature_img"> <img src="~/Content/images/it_service/post-06.jpg" alt="#" /> </div>
+                    <div class="post_time">
+                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                    </div>
+                    <div class="blog_feature_head">
+                        <h4>Computer Maintenance 2018</h4>
+                    </div>
+                    <div class="blog_feature_cont">
+                        <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<!-- end section -->
+<!-- section -->
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1" style="padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <ul class="brand_list">
+                        <li><img src="~/Content/images/it_service/brand_icon1.png" alt="#" /></li>
+                        <li><img src="~/Content/images/it_service/brand_icon2.png" alt="#" /></li>
+                        <li><img src="~/Content/images/it_service/brand_icon3.png" alt="#" /></li>
+                        <li><img src="~/Content/images/it_service/brand_icon4.png" alt="#" /></li>
+                        <li><img src="~/Content/images/it_service/brand_icon5.png" alt="#" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- Modal -->
+<!-- End Model search bar -->
+<!-- footer -->
+@section scripts{
+    <script src="~/Scripts/timkiem.js"></script>
+    <script src="~/Scripts/slide.js"></script>
+    <script src="~/Scripts/comment.js"></script>
+}

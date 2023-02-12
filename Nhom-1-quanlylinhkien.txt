@@ -1,0 +1,7 @@
+			Nhóm 1 : Đề Tài WebSite Bán Linh Kiện Máy Tính
+			
+	TÊN				Nhiệm Vụ Phân Công
+	VŨ THÁI TUẤN			- Thiết Kế Database, Phân Trang, Làm Trang Chi Tiết Sản Phẩm, FIX Tìm Kiếm, Đổ Dữ Liệu Giao Diện
+	VÕ MINH DUY			- Mua Hàng, Tìm Kiếm version 1 ,Thanh Toán, thêm giỏ hàng
+	NGUYỄN KIM HƯNG			- Thiết Kế Giao diện, Viết Bình Luận, Tạo Đăng Ký , Tạo Đăng Nhập
+	VŨ ĐỨC VĂN			- Nhập DaTabase Tìm kiếm hình ảnh

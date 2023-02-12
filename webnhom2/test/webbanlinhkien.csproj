@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{868D9909-8D1B-4357-BF3D-324070BCFB3B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ConnectDB\conectDB.cs" />
+    <Compile Include="Controllers\GioHang1Controller.cs" />
+    <Compile Include="Controllers\ITNEXTController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ThanhToanController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\comment.cs" />
+    <Compile Include="Models\giohang.cs" />
+    <Compile Include="Models\Linhkien.cs" />
+    <Compile Include="Models\login.cs" />
+    <Compile Include="Models\register.cs" />
+    <Compile Include="Models\thanhtoan.cs" />
+    <Compile Include="Models\timkiem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Book\banner_collection.jpg" />
+    <Content Include="Content\Book\banner_product_home_1.jpg" />
+    <Content Include="Content\Book\Bimatthanhcong.png" />
+    <Content Include="Content\Book\Chuduvaotamtrikhachhang.jpg" />
+    <Content Include="Content\Book\dacnhantam.jpg" />
+    <Content Include="Content\Book\dandauhaylachet.jpg" />
+    <Content Include="Content\Book\howwework.jpg" />
+    <Content Include="Content\Book\sucmanhcuangontu.jpg" />
+    <Content Include="Content\Book\toiquyetdinhsongchochinhtoi.jpg" />
+    <Content Include="Content\Book\vuivekhongquaunha.jpg" />
+    <Content Include="Content\images\avartar1.jpg" />
+    <Content Include="Content\images\banner-01.jpg" />
+    <Content Include="Content\linhkien\banner_collection.jpg" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap-grid.min.css" />
+    <Content Include="Content\css\bootstrap-reboot.css" />
+    <Content Include="Content\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\css\bootstrap-select.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\colors1.css" />
+    <Content Include="Content\css\colors1_dark.css" />
+    <Content Include="Content\css\colors2.css" />
+    <Content Include="Content\css\colors3.css" />
+    <Content Include="Content\css\colors_landing_page.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\dark_layout.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\hizoom.css" />
+    <Content Include="Content\css\owl.carousel.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\owl.theme.default.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\Banner_2.jpg" />
+    <Content Include="Content\images\fevicon\fevicon.png" />
+    <Content Include="Content\images\gradian_black.png" />
+    <Content Include="Content\images\gradian_blue.png" />
+    <Content Include="Content\images\it_service\1.jpg" />
+    <Content Include="Content\images\it_service\2.jpg" />
+    <Content Include="Content\images\it_service\22.jpg" />
+    <Content Include="Content\images\it_service\3.jpg" />
+    <Content Include="Content\images\it_service\4.jpg" />
+    <Content Include="Content\images\it_service\404_error_img.png" />
+    <Content Include="Content\images\it_service\5.jpg" />
+    <Content Include="Content\images\it_service\6.jpg" />
+    <Content Include="Content\images\it_service\7.jpg" />
+    <Content Include="Content\images\it_service\8.jpg" />
+    <Content Include="Content\images\it_service\accepted.png" />
+    <Content Include="Content\images\it_service\brand_icon1.png" />
+    <Content Include="Content\images\it_service\brand_icon2.png" />
+    <Content Include="Content\images\it_service\brand_icon3.png" />
+    <Content Include="Content\images\it_service\brand_icon4.png" />
+    <Content Include="Content\images\it_service\brand_icon5.png" />
+    <Content Include="Content\images\it_service\client1.jpg" />
+    <Content Include="Content\images\it_service\client1.png" />
+    <Content Include="Content\images\it_service\client2.jpg" />
+    <Content Include="Content\images\it_service\client2.png" />
+    <Content Include="Content\images\it_service\client3.jpg" />
+    <Content Include="Content\images\it_service\client3.png" />
+    <Content Include="Content\images\it_service\dark_bg_img.png" />
+    <Content Include="Content\images\it_service\dark_bg_img2.png" />
+    <Content Include="Content\images\it_service\home_01.png" />
+    <Content Include="Content\images\it_service\i1.png" />
+    <Content Include="Content\images\it_service\i2.png" />
+    <Content Include="Content\images\it_service\i3.png" />
+    <Content Include="Content\images\it_service\i4.png" />
+    <Content Include="Content\images\it_service\inner_page_banner.jpg" />
+    <Content Include="Content\images\it_service\location_icon_map_cont.png" />
+    <Content Include="Content\images\it_service\phone_icon.png" />
+    <Content Include="Content\images\it_service\post-01.jpg" />
+    <Content Include="Content\images\it_service\post-02.jpg" />
+    <Content Include="Content\images\it_service\post-03.jpg" />
+    <Content Include="Content\images\it_service\post-04.jpg" />
+    <Content Include="Content\images\it_service\post-05.jpg" />
+    <Content Include="Content\images\it_service\post-06.jpg" />
+    <Content Include="Content\images\it_service\post-07.jpg" />
+    <Content Include="Content\images\it_service\post-08.jpg" />
+    <Content Include="Content\images\it_service\si1.png" />
+    <Content Include="Content\images\it_service\si2.png" />
+    <Content Include="Content\images\it_service\si3.png" />
+    <Content Include="Content\images\it_service\si4.png" />
+    <Content Include="Content\images\it_service\si5.png" />
+    <Content Include="Content\images\it_service\si6.png" />
+    <Content Include="Content\images\it_service\slide1.jpg" />
+    <Content Include="Content\images\it_service\slide2.jpg" />
+    <Content Include="Content\images\it_service\slide3.jpg" />
+    <Content Include="Content\images\it_service\team-member-1.jpg" />
+    <Content Include="Content\images\it_service\team-member-2.jpg" />
+    <Content Include="Content\images\it_service\team-member-3.jpg" />
+    <Content Include="Content\images\it_service\test_bg.png" />
+    <Content Include="Content\images\loaders\loader_1.png" />
+    <Content Include="Content\images\logos\it_logo.png" />
+    <Content Include="Content\images\logos\it_logo_white.png" />
+    <Content Include="Content\images\Tich-xanh.png" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\hizoom.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\menumaker.js" />
+    <Content Include="Content\js\wow.js" />
+    <Content Include="Content\linhkien\pic01.png" />
+    <Content Include="Content\linhkien\pic02.png" />
+    <Content Include="Content\linhkien\pic03.png" />
+    <Content Include="Content\linhkien\pic04.png" />
+    <Content Include="Content\linhkien\pic05.png" />
+    <Content Include="Content\linhkien\pic06.jpg" />
+    <Content Include="Content\linhkien\pic06.png" />
+    <Content Include="Content\linhkien\pic07.png" />
+    <Content Include="Content\linhkien\pic08.png" />
+    <Content Include="Content\linhkien\pic09.png" />
+    <Content Include="Content\linhkien\pic10.png" />
+    <Content Include="Content\linhkien\pic100.png" />
+    <Content Include="Content\linhkien\pic101.png" />
+    <Content Include="Content\linhkien\pic102.png" />
+    <Content Include="Content\linhkien\pic103.png" />
+    <Content Include="Content\linhkien\pic104.png" />
+    <Content Include="Content\linhkien\pic106.png" />
+    <Content Include="Content\linhkien\pic107.png" />
+    <Content Include="Content\linhkien\pic108.png" />
+    <Content Include="Content\linhkien\pic109.png" />
+    <Content Include="Content\linhkien\pic11.png" />
+    <Content Include="Content\linhkien\pic110.png" />
+    <Content Include="Content\linhkien\pic111.png" />
+    <Content Include="Content\linhkien\pic112.png" />
+    <Content Include="Content\linhkien\pic113.png" />
+    <Content Include="Content\linhkien\pic114.png" />
+    <Content Include="Content\linhkien\pic115.png" />
+    <Content Include="Content\linhkien\pic116.png" />
+    <Content Include="Content\linhkien\pic117.png" />
+    <Content Include="Content\linhkien\pic118.png" />
+    <Content Include="Content\linhkien\pic119.png" />
+    <Content Include="Content\linhkien\pic12.png" />
+    <Content Include="Content\linhkien\pic120.png" />
+    <Content Include="Content\linhkien\pic121.png" />
+    <Content Include="Content\linhkien\pic122.png" />
+    <Content Include="Content\linhkien\pic123.png" />
+    <Content Include="Content\linhkien\pic124.png" />
+    <Content Include="Content\linhkien\pic125.png" />
+    <Content Include="Content\linhkien\pic126.jpg" />
+    <Content Include="Content\linhkien\pic126.png" />
+    <Content Include="Content\linhkien\pic127.png" />
+    <Content Include="Content\linhkien\pic128.png" />
+    <Content Include="Content\linhkien\pic129.png" />
+    <Content Include="Content\linhkien\pic13.png" />
+    <Content Include="Content\linhkien\pic130.png" />
+    <Content Include="Content\linhkien\pic131.png" />
+    <Content Include="Content\linhkien\pic132.png" />
+    <Content Include="Content\linhkien\pic133.png" />
+    <Content Include="Content\linhkien\pic134.png" />
+    <Content Include="Content\linhkien\pic135.png" />
+    <Content Include="Content\linhkien\pic136.png" />
+    <Content Include="Content\linhkien\pic137.jpg" />
+    <Content Include="Content\linhkien\pic137.png" />
+    <Content Include="Content\linhkien\pic138.png" />
+    <Content Include="Content\linhkien\pic139.jpg" />
+    <Content Include="Content\linhkien\pic139.png" />
+    <Content Include="Content\linhkien\pic14.png" />
+    <Content Include="Content\linhkien\pic140.jpg" />
+    <Content Include="Content\linhkien\pic140.png" />
+    <Content Include="Content\linhkien\pic141.jpg" />
+    <Content Include="Content\linhkien\pic141.png" />
+    <Content Include="Content\linhkien\pic142.jpg" />
+    <Content Include="Content\linhkien\pic142.png" />
+    <Content Include="Content\linhkien\pic143.jpg" />
+    <Content Include="Content\linhkien\pic143.png" />
+    <Content Include="Content\linhkien\pic144.jpg" />
+    <Content Include="Content\linhkien\pic144.png" />
+    <Content Include="Content\linhkien\pic145.png" />
+    <Content Include="Content\linhkien\pic146.jpg" />
+    <Content Include="Content\linhkien\pic146.png" />
+    <Content Include="Content\linhkien\pic147.jpg" />
+    <Content Include="Content\linhkien\pic147.png" />
+    <Content Include="Content\linhkien\pic148.jpg" />
+    <Content Include="Content\linhkien\pic148.png" />
+    <Content Include="Content\linhkien\pic149.png" />
+    <Content Include="Content\linhkien\pic15.jpg" />
+    <Content Include="Content\linhkien\pic15.png" />
+    <Content Include="Content\linhkien\pic150.png" />
+    <Content Include="Content\linhkien\pic151.png" />
+    <Content Include="Content\linhkien\pic152.png" />
+    <Content Include="Content\linhkien\pic153.png" />
+    <Content Include="Content\linhkien\pic154.png" />
+    <Content Include="Content\linhkien\pic155.png" />
+    <Content Include="Content\linhkien\pic156.png" />
+    <Content Include="Content\linhkien\pic157.png" />
+    <Content Include="Content\linhkien\pic158.png" />
+    <Content Include="Content\linhkien\pic159.png" />
+    <Content Include="Content\linhkien\pic16.jpg" />
+    <Content Include="Content\linhkien\pic16.png" />
+    <Content Include="Content\linhkien\pic160.png" />
+    <Content Include="Content\linhkien\pic161.png" />
+    <Content Include="Content\linhkien\pic162.png" />
+    <Content Include="Content\linhkien\pic163.png" />
+    <Content Include="Content\linhkien\pic164.png" />
+    <Content Include="Content\linhkien\pic165.png" />
+    <Content Include="Content\linhkien\pic166.png" />
+    <Content Include="Content\linhkien\pic167.png" />
+    <Content Include="Content\linhkien\pic168.png" />
+    <Content Include="Content\linhkien\pic169.png" />
+    <Content Include="Content\linhkien\pic17.png" />
+    <Content Include="Content\linhkien\pic170.png" />
+    <Content Include="Content\linhkien\pic171.png" />
+    <Content Include="Content\linhkien\pic172.png" />
+    <Content Include="Content\linhkien\pic173.png" />
+    <Content Include="Content\linhkien\pic174.png" />
+    <Content Include="Content\linhkien\pic175.png" />
+    <Content Include="Content\linhkien\pic176.png" />
+    <Content Include="Content\linhkien\pic177.png" />
+    <Content Include="Content\linhkien\pic178.png" />
+    <Content Include="Content\linhkien\pic179.png" />
+    <Content Include="Content\linhkien\pic18.jpg" />
+    <Content Include="Content\linhkien\pic18.png" />
+    <Content Include="Content\linhkien\pic180.png" />
+    <Content Include="Content\linhkien\pic181.png" />
+    <Content Include="Content\linhkien\pic182.png" />
+    <Content Include="Content\linhkien\pic183.png" />
+    <Content Include="Content\linhkien\pic184.png" />
+    <Content Include="Content\linhkien\pic185.png" />
+    <Content Include="Content\linhkien\pic186.png" />
+    <Content Include="Content\linhkien\pic187.png" />
+    <Content Include="Content\linhkien\pic188.png" />
+    <Content Include="Content\linhkien\pic189.png" />
+    <Content Include="Content\linhkien\pic19.jpg" />
+    <Content Include="Content\linhkien\pic19.png" />
+    <Content Include="Content\linhkien\pic190.png" />
+    <Content Include="Content\linhkien\pic191.png" />
+    <Content Include="Content\linhkien\pic192.png" />
+    <Content Include="Content\linhkien\pic193.png" />
+    <Content Include="Content\linhkien\pic194.png" />
+    <Content Include="Content\linhkien\pic195.png" />
+    <Content Include="Content\linhkien\pic196.png" />
+    <Content Include="Content\linhkien\pic197.png" />
+    <Content Include="Content\linhkien\pic198.png" />
+    <Content Include="Content\linhkien\pic199.png" />
+    <Content Include="Content\linhkien\pic20.png" />
+    <Content Include="Content\linhkien\pic200.png" />
+    <Content Include="Content\linhkien\pic201.png" />
+    <Content Include="Content\linhkien\pic202.png" />
+    <Content Include="Content\linhkien\pic203.png" />
+    <Content Include="Content\linhkien\pic204.png" />
+    <Content Include="Content\linhkien\pic205.png" />
+    <Content Include="Content\linhkien\pic206.png" />
+    <Content Include="Content\linhkien\pic207.png" />
+    <Content Include="Content\linhkien\pic208.png" />
+    <Content Include="Content\linhkien\pic209.png" />
+    <Content Include="Content\linhkien\pic21.png" />
+    <Content Include="Content\linhkien\pic210.png" />
+    <Content Include="Content\linhkien\pic211.png" />
+    <Content Include="Content\linhkien\pic212.png" />
+    <Content Include="Content\linhkien\pic213.png" />
+    <Content Include="Content\linhkien\pic214.png" />
+    <Content Include="Content\linhkien\pic215.png" />
+    <Content Include="Content\linhkien\pic216.png" />
+    <Content Include="Content\linhkien\pic217.png" />
+    <Content Include="Content\linhkien\pic218.png" />
+    <Content Include="Content\linhkien\pic219.png" />
+    <Content Include="Content\linhkien\pic22.png" />
+    <Content Include="Content\linhkien\pic220.png" />
+    <Content Include="Content\linhkien\pic221.png" />
+    <Content Include="Content\linhkien\pic222.png" />
+    <Content Include="Content\linhkien\pic223.png" />
+    <Content Include="Content\linhkien\pic224.png" />
+    <Content Include="Content\linhkien\pic225.png" />
+    <Content Include="Content\linhkien\pic226.png" />
+    <Content Include="Content\linhkien\pic227.png" />
+    <Content Include="Content\linhkien\pic228.png" />
+    <Content Include="Content\linhkien\pic229.png" />
+    <Content Include="Content\linhkien\pic23.png" />
+    <Content Include="Content\linhkien\pic230.png" />
+    <Content Include="Content\linhkien\pic231.png" />
+    <Content Include="Content\linhkien\pic232.png" />
+    <Content Include="Content\linhkien\pic233.png" />
+    <Content Include="Content\linhkien\pic234.png" />
+    <Content Include="Content\linhkien\pic235.png" />
+    <Content Include="Content\linhkien\pic236.png" />
+    <Content Include="Content\linhkien\pic237.png" />
+    <Content Include="Content\linhkien\pic238.png" />
+    <Content Include="Content\linhkien\pic239.png" />
+    <Content Include="Content\linhkien\pic24.png" />
+    <Content Include="Content\linhkien\pic240.png" />
+    <Content Include="Content\linhkien\pic241.png" />
+    <Content Include="Content\linhkien\pic242.png" />
+    <Content Include="Content\linhkien\pic243.png" />
+    <Content Include="Content\linhkien\pic244.png" />
+    <Content Include="Content\linhkien\pic245.png" />
+    <Content Include="Content\linhkien\pic246.png" />
+    <Content Include="Content\linhkien\pic247.png" />
+    <Content Include="Content\linhkien\pic248.png" />
+    <Content Include="Content\linhkien\pic249.png" />
+    <Content Include="Content\linhkien\pic25.png" />
+    <Content Include="Content\linhkien\pic250.png" />
+    <Content Include="Content\linhkien\pic26.png" />
+    <Content Include="Content\linhkien\pic27.png" />
+    <Content Include="Content\linhkien\pic28.png" />
+    <Content Include="Content\linhkien\pic29.png" />
+    <Content Include="Content\linhkien\pic30.png" />
+    <Content Include="Content\linhkien\pic31.png" />
+    <Content Include="Content\linhkien\pic32.png" />
+    <Content Include="Content\linhkien\pic33.png" />
+    <Content Include="Content\linhkien\pic34.png" />
+    <Content Include="Content\linhkien\pic35.png" />
+    <Content Include="Content\linhkien\pic36.png" />
+    <Content Include="Content\linhkien\pic37.png" />
+    <Content Include="Content\linhkien\pic38.png" />
+    <Content Include="Content\linhkien\pic39.png" />
+    <Content Include="Content\linhkien\pic40.png" />
+    <Content Include="Content\linhkien\pic41.png" />
+    <Content Include="Content\linhkien\pic42.png" />
+    <Content Include="Content\linhkien\pic43.png" />
+    <Content Include="Content\linhkien\pic44.png" />
+    <Content Include="Content\linhkien\pic45.png" />
+    <Content Include="Content\linhkien\pic46.png" />
+    <Content Include="Content\linhkien\pic47.png" />
+    <Content Include="Content\linhkien\pic48.png" />
+    <Content Include="Content\linhkien\pic49.png" />
+    <Content Include="Content\linhkien\pic50.png" />
+    <Content Include="Content\linhkien\pic51.png" />
+    <Content Include="Content\linhkien\pic52.png" />
+    <Content Include="Content\linhkien\pic53.png" />
+    <Content Include="Content\linhkien\pic54.png" />
+    <Content Include="Content\linhkien\pic55.png" />
+    <Content Include="Content\linhkien\pic56.png" />
+    <Content Include="Content\linhkien\pic57.png" />
+    <Content Include="Content\linhkien\pic58.png" />
+    <Content Include="Content\linhkien\pic59.png" />
+    <Content Include="Content\linhkien\pic60.png" />
+    <Content Include="Content\linhkien\pic61.png" />
+    <Content Include="Content\linhkien\pic62.png" />
+    <Content Include="Content\linhkien\pic63.png" />
+    <Content Include="Content\linhkien\pic64.png" />
+    <Content Include="Content\linhkien\pic65.png" />
+    <Content Include="Content\linhkien\pic66.png" />
+    <Content Include="Content\linhkien\pic67.png" />
+    <Content Include="Content\linhkien\pic68.png" />
+    <Content Include="Content\linhkien\pic69.png" />
+    <Content Include="Content\linhkien\pic70.png" />
+    <Content Include="Content\linhkien\pic71.png" />
+    <Content Include="Content\linhkien\pic72.png" />
+    <Content Include="Content\linhkien\pic73.png" />
+    <Content Include="Content\linhkien\pic74.png" />
+    <Content Include="Content\linhkien\pic75.png" />
+    <Content Include="Content\linhkien\pic76.jpg" />
+    <Content Include="Content\linhkien\pic76.png" />
+    <Content Include="Content\linhkien\pic77.png" />
+    <Content Include="Content\linhkien\pic78.jpg" />
+    <Content Include="Content\linhkien\pic78.png" />
+    <Content Include="Content\linhkien\pic79.png" />
+    <Content Include="Content\linhkien\pic80.png" />
+    <Content Include="Content\linhkien\pic81.png" />
+    <Content Include="Content\linhkien\pic82.png" />
+    <Content Include="Content\linhkien\pic83.png" />
+    <Content Include="Content\linhkien\pic84.png" />
+    <Content Include="Content\linhkien\pic85.png" />
+    <Content Include="Content\linhkien\pic86.png" />
+    <Content Include="Content\linhkien\pic87.png" />
+    <Content Include="Content\linhkien\pic88.png" />
+    <Content Include="Content\linhkien\pic89.png" />
+    <Content Include="Content\linhkien\pic90.png" />
+    <Content Include="Content\linhkien\pic91.png" />
+    <Content Include="Content\linhkien\pic92.png" />
+    <Content Include="Content\linhkien\pic93.png" />
+    <Content Include="Content\linhkien\pic94.png" />
+    <Content Include="Content\linhkien\pic95.png" />
+    <Content Include="Content\linhkien\pic96.png" />
+    <Content Include="Content\linhkien\pic97.jpg" />
+    <Content Include="Content\linhkien\pic97.png" />
+    <Content Include="Content\linhkien\pic98.png" />
+    <Content Include="Content\linhkien\pic99.png" />
+    <Content Include="Content\revolution\assets\coloredbg.png" />
+    <Content Include="Content\revolution\assets\gridtile.png" />
+    <Content Include="Content\revolution\assets\gridtile_3x3.png" />
+    <Content Include="Content\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="Content\revolution\assets\gridtile_white.png" />
+    <Content Include="Content\revolution\assets\loader.gif" />
+    <Content Include="Content\revolution\css\closedhand.cur" />
+    <Content Include="Content\revolution\css\layers.css" />
+    <Content Include="Content\revolution\css\navigation.css" />
+    <Content Include="Content\revolution\css\openhand.cur" />
+    <Content Include="Content\revolution\css\settings.css" />
+    <Content Include="Content\revolution\fonts\revicons\revicons.svg" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="Content\revolution\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="Content\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\revolution\fonts\revicons\revicons.eot" />
+    <Content Include="Content\revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="Content\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="Content\linhkien\pic03.webp" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\comment.js" />
+    <Content Include="Scripts\comment1.js" />
+    <Content Include="Scripts\GiohangScripts.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\register.js" />
+    <Content Include="Scripts\slide.js" />
+    <Content Include="Scripts\thanhtoanscripts.js" />
+    <Content Include="Scripts\timkiem.js" />
+    <Content Include="Scripts\tinhtienScripts.js" />
+    <Content Include="Scripts\xoaGiohangscripts.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\ITNEXT\Laptop.cshtml" />
+    <Content Include="Views\ITNEXT\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Register\Register_done.cshtml" />
+    <Content Include="Views\ITNEXT\CPU.cshtml" />
+    <Content Include="Views\ITNEXT\VGA.cshtml" />
+    <Content Include="Views\ITNEXT\HDD.cshtml" />
+    <Content Include="Views\ITNEXT\MainBoard.cshtml" />
+    <Content Include="Views\ITNEXT\Ram.cshtml" />
+    <Content Include="Views\ITNEXT\LinhKien.cshtml" />
+    <Content Include="Views\ITNEXT\ManHinh.cshtml" />
+    <Content Include="Views\ITNEXT\GamingGear.cshtml" />
+    <Content Include="Views\ITNEXT\Chuot.cshtml" />
+    <Content Include="Views\ITNEXT\BanPhim.cshtml" />
+    <Content Include="Views\ITNEXT\TaiNghe.cshtml" />
+    <Content Include="Views\ITNEXT\TayCam.cshtml" />
+    <Content Include="Views\ITNEXT\VR.cshtml" />
+    <Content Include="Views\ITNEXT\PhuKien.cshtml" />
+    <Content Include="Views\ITNEXT\MayIn.cshtml" />
+    <Content Include="Views\TimKiem\Ttimkiem.cshtml" />
+    <Content Include="Views\GioHang1\ViewGioHang.cshtml" />
+    <Content Include="Views\ITNEXT\Details.cshtml" />
+    <Content Include="Views\ThanhToan\Checkout.cshtml" />
+    <Content Include="Views\ITNEXT\Loa.cshtml" />
+    <Content Include="Views\ITNEXT\ThietBiLuuTru.cshtml" />
+    <Content Include="Views\ITNEXT\ThietBiMang.cshtml" />
+    <Content Include="Views\ThanhToan\Checkout_done.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49448/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
